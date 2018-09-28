@@ -70,14 +70,7 @@
           <div class="mdl-cell mdl-cell--10-col">
             <div class="mdl-grid">
               <div class="mdl-cell mdl-cell--4-col">
-                <div class="card-image mdl-card mdl-shadow--2dp">
-                  <div class="mdl-card__title mdl-card--expand"></div>
-                  <div class="mdl-card__actions">
-                    <span class="card-image__filename">
-                      SCAN QR HERE
-                    </span>
-                  </div>
-                </div>
+                <video id="preview"></video>
               </div>
               <div class="mdl-cell mdl-cell--8-col">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid architecto deserunt animi consectetur rerum natus cupiditate exercitationem accusantium eos, nam soluta sint quos optio sapiente voluptatem cum ex expedita alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo, itaque ut aliquam earum ipsam reprehenderit. Possimus harum ipsum voluptates! Placeat delectus accusamus libero necessitatibus, magni aspernatur ipsum suscipit ut!
@@ -88,5 +81,21 @@
       </main>
     </div>
     <script src="./material.min.js"></script>
+    <script src="./instascan.min.js"></script>
+    <script>
+      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+      scanner.addListener('scan', function (content) {
+        console.log(content);
+      });
+      Instascan.Camera.getCameras().then(function (cameras) {
+        if (cameras.length > 0) {
+          scanner.start(cameras[0]);
+        } else {
+          console.error('No cameras found.');
+        }
+      }).catch(function (e) {
+        console.error(e);
+      });
+    </script>
   </body>
 </html>
