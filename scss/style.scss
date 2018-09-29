@@ -1,31 +1,42 @@
 html,
-body,
-.view {
+body {
   height: 100%;
-}
-.full-page-intro {
-  height: 100vh;
-  background-image: url('https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 .navbar {
   background-color: #ffffff;
 }
-.note {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: #ffffff;
-  
-  a {
+.page {
+  height: 100vh;
+  background-image: url('https://images.pexels.com/photos/459654/pexels-photo-459654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .mask {
+    height: 100vh;
+  }
+  &__title {
+    font-size: 2rem;
     color: #ffffff;
-    font-weight: bold;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__note {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #ffffff;
+    
+    a {
+      color: #ffffff;
+      font-weight: bold;
+    }
   }
 }
 .card {
   position: relative;
   overflow: hidden;
+
   video {
     width: 100%;
     border-radius: 4px;
