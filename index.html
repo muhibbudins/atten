@@ -1,88 +1,67 @@
-<!doctype html>
-<!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-      https://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License
--->
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Material Design Lite</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>QR Attendance</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+  <nav class="navbar fixed-top navbar-expand-lg scrolling-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="" target="_blank">
+        <strong>QR Attendance</strong>
+      </a>
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menus" aria-controls="menus" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menus">
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+            <a href="" class="nav-link px-4" target="_blank">
+              Github
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-flex-icons ml-auto">
+          <li class="nav-item">
+            <a href="" class="nav-link border border-light rounded px-4" target="_blank">
+              Open Client
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#3372DF">
-
-    <link rel="shortcut icon" href="images/favicon.png">
-
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="material.min.css">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-          <h3>QR Attendance App</h3>
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-          <a href="#overview" class="mdl-layout__tab is-active">Attendance</a>
-          <a href="#features" class="mdl-layout__tab">Github</a>
-          <a href="#features" class="mdl-layout__tab">Author</a>
-        </div>
-      </header>
-      <main class="mdl-layout__content">
-        <div class="mdl-grid">
-          <div class="mdl-cell mdl-cell--10-col">
-            <div class="mdl-grid">
-              <div class="mdl-cell mdl-cell--4-col">
+  <div class="view full-page-intro">
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row wow fadeIn">
+          <div class="col-lg-6 offset-lg-3 col-md-12 mb-4">
+            <div class="titl">Scan you Attendance</div>
+            <div class="card">
+              <div class="card-body scanning">
                 <video id="preview"></video>
-              </div>
-              <div class="mdl-cell mdl-cell--8-col">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid architecto deserunt animi consectetur rerum natus cupiditate exercitationem accusantium eos, nam soluta sint quos optio sapiente voluptatem cum ex expedita alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem nemo, itaque ut aliquam earum ipsam reprehenderit. Possimus harum ipsum voluptates! Placeat delectus accusamus libero necessitatibus, magni aspernatur ipsum suscipit ut!
               </div>
             </div>
           </div>
         </div>
-      </main>
+      </div>
     </div>
-    <script src="./material.min.js"></script>
-    <script src="./instascan.min.js"></script>
-    <script>
+  </div>
+
+  <div class="note">
+    Base template by <a href="https://mdbootstrap.com/freebies/landing-page-template/">MDBootstrap</a>
+  </div>
+
+  <script type="text/javascript" src="instascan.min.js"></script>
+  <script>
       let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
       scanner.addListener('scan', function (content) {
         console.log(content);
@@ -97,5 +76,6 @@
         console.error(e);
       });
     </script>
-  </body>
+</body>
+
 </html>
