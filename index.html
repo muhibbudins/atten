@@ -60,22 +60,7 @@
     Base template by <a href="https://mdbootstrap.com/freebies/landing-page-template/">MDBootstrap</a>
   </div>
 
-  <script type="text/javascript" src="instascan.min.js"></script>
-  <script>
-      let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
-      scanner.addListener('scan', function (content) {
-        console.log(content);
-      });
-      Instascan.Camera.getCameras().then(function (cameras) {
-        if (cameras.length > 0) {
-          scanner.start(cameras[0]);
-        } else {
-          console.error('No cameras found.');
-        }
-      }).catch(function (e) {
-        console.error(e);
-      });
-    </script>
+  <script type="text/javascript" src="js/instascan.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 </body>
-
 </html>
