@@ -2,8 +2,8 @@
 
 Attendance system using QR only using HTML5 & JavaScript, without NodeJS and base on Browser Navigator. This project use **Stream API** for Webcamp and **Audio API** for Playing sound, so if you can't run this project. Please consider to view this compatibility table :
 
-[**Stream API**](https://caniuse.com/#feat=stream)
-[**Audio API**](https://caniuse.com/#feat=audio)
+- [**Stream API**](https://caniuse.com/#feat=stream)
+- [**Audio API**](https://caniuse.com/#feat=audio)
 
 ## Client
 
